@@ -3,10 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   try {
-    console.log(request);
-
     const { userId, title, imgUrl } = await request.json();
-    console.log(userId, title, imgUrl);
 
     if (!imgUrl) {
       return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });

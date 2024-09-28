@@ -7,7 +7,6 @@ const AlbumPage = async () => {
   const { getUser } = getKindeServerSession();
   const { id } = await getUser();
   const album = await getImages(id);
-  console.log(album);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">

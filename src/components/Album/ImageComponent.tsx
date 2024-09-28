@@ -28,7 +28,6 @@ const ImageComponent = ({ image }: Props) => {
       });
       if (response.ok) {
         setIsDeleted(true);
-        console.log('Image deleted successfully');
       } else {
         console.error('Failed to delete image');
       }

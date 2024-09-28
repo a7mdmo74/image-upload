@@ -11,7 +11,7 @@ export async function DELETE(request: Request) {
 
     await removeImage(id);
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, imgId: id });
   } catch (error) {
     console.error('Error deleting image:', error);
     return NextResponse.json(
